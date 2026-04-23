@@ -58,9 +58,8 @@ def choose(wordfreq):
 def main():
 	# Initialise.
 	data_dir = "data/"
-	n = 2
 	for arg in sys.argv[1:]:
-		if arg.isnumeric(): n = int(arg)
+		if arg.isnumeric(): int(arg)
 		else: data_dir = arg
 
 	# Build the frequency table by reading the input text(s).
