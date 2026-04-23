@@ -31,7 +31,8 @@ def generate(f, starters, contexts):
 		word = choose(wordfreq)
 		f.write(" " + word)
 		context = context[1:] + [word]
-		if(word[-1] == "." and word != "Mr." and word != "Mrs."):
+		if((word[-1] == "." or word[-1] == "!" or word[-1] == "?") # Split on punctuations
+	 		and word != "Mr." and word != "Mrs." and word != "St."): # Do not split on titles
 			f.write("\n")
 	f.write("\n")
 
