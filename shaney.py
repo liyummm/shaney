@@ -31,6 +31,8 @@ def generate(f, starters, contexts):
 		word = choose(wordfreq)
 		f.write(" " + word)
 		context = context[1:] + [word]
+		if(word[-1] == "." and word != "Mr." and word != "Mrs."):
+			f.write("\n")
 	f.write("\n")
 
 # Randomly choose one word from a {word->frequency}
